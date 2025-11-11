@@ -143,6 +143,7 @@ public class Increment_Decrement {
                           int d9 = c9-- + ++b9 + ++a9;
                           int e = a9 + ++b9 +c9 + d9++;
                 System.out.println("The value of ++e is: "+e);
+        System.out.println(a9);
 
 
 
