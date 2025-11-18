@@ -108,6 +108,9 @@ public class Loop {
                     A non-prime number has more than 2 divisors
                      */
 
+        // Example 6 is Perfact square
+
+
 
 
 
