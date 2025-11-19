@@ -217,6 +217,70 @@ public class While_loop_01 {
 
                               System.out.println("Loop End");
 
+    // Question 15: WAJP to print all the factor of a number of 28.
+                              int n1 = 28;
+                              int i14 = 1;
+                              while (i14 <= n1) {
+
+                                  if (n1 % i14==0) {
+                                      System.out.println(i14);   // checks if i14 is a factor
+                                  }
+                                  i14++;
+                              }
+                              System.out.println("Loop End");
+
+    // Question 16: WAJP to count the factors of a number. i/p: 28
+                              int count8 = 0;
+                              int n2 = 28;
+                              int i15 = 1;
+                              while (i15<=n2) {
+
+                                  if (n2 % i15==0) {  // if remainder is 0 → i15 is a factor
+                                      count8++;
+                                  }
+                                  i15++;
+                              }
+                              System.out.println("The Total number of factor is: " + count8);
+
+                              System.out.println("Loop End");
+
+    // Question 17: WAJP to print and count all the factors ofa number. i/p: 28
+                              int count9 = 0;
+                              int n3 = 28;
+                              int i16 = 1;
+                              while (i16<=n3) {
+
+                                  if (n3 % i16==0) {
+                                      System.out.println(i16);  // print factor
+                                      count9++;
+                                  }
+                                  i16++;
+                              }
+                              System.out.println("The Total number of factor is: " + count9);
+
+                              System.out.println("Loop End");
+
+    // Question 18: Three divisor leet code problem Given an integer n, return true if n has exactly three positive divisors. Otherwise, return false.
+        // An integer m is a divisor of n if there exists an integer k such that n = k * m.
+                              int n4 = 3;
+                      // Function to check if n has exactly 3 divisors
+                              int count10 = 0;
+                              int i17 = 1;
+
+                              while (i17 <= n4) {
+                               if (n4 % i17 == 0) {
+                                   count10++;
+                               }
+                               i17++;
+                              }
+                              if (count10==3) {
+                                  System.out.println(true);
+                              } else {
+                                  System.out.println(false);
+                              }
+                              System.out.println("loop end");
+
+
 
 
     }
