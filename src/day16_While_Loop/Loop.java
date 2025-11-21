@@ -108,7 +108,15 @@ public class Loop {
                     A non-prime number has more than 2 divisors
                      */
 
-        // Example 6 is Perfact square
+        // Example 6 Sum of number
+                    int sum = 0;
+                    int i4 = 1;
+
+                    while (i4>=n) {
+                        sum = sum + i4;
+                        i4++;
+                    }
+                    System.out.println("Sum = "+sum);
 
 
 
