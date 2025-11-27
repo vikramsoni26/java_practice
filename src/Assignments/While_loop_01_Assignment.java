@@ -1,6 +1,6 @@
 package Assignments;
 
-public class While_loop_01 {
+public class While_loop_01_Assignment {
     public static void main(String[] args) {
 
         // Question 1: WAJP to print all the numbers from 1 to 10.
