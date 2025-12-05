@@ -64,7 +64,7 @@ public class While_loop_03_Assignment {
 
                              int rem = n1 % 10;   // last digit
 
-    if (rem % 2 == 0) {      // check even digit
+                         if (rem % 2 == 0) {      // check even digit
                                  System.out.println(rem);
                              }
                              n1 /= 10;             // remove last digit (always!)
@@ -310,6 +310,145 @@ public class While_loop_03_Assignment {
                           n11 /= 10;
                       }
                       System.out.println("Total digit of the number which are less then or equal to 5 in " + original2 + " = " + count5);
+    // Question 13: Write a java program to take a user input and print each digit of the number from left to right.
+        // Input: N=43705;
+                      System.out.println("Enter a number");
+                      int n12 = sc.nextInt();
+
+                      // Step 1: Reverse the number first
+                      int rev = 0;
+                      int temp1 = n;
+
+                      while (temp1 > 0)  {
+                          int rem1 = temp1 % 10;
+                          rev = rev * 10 + rem;
+                          temp1 /= 10;
+                      }
+        // Step 2: Now print digits of reversed number (which is original left → right)
+                      while (rev > 0) {
+                          int rem2 = rev % 10;
+                          System.out.println(rem);
+                          rev /= 10;
+                      }
+                      /*
+                      🧠 Why do we reverse the number?
+                      Because normal digit extraction gives digits from right to left:
+                      Example:43705
+                      Right to left → 5, 0, 7, 3, 4 We want → 4, 3, 7, 0, 5
+                      To achieve this without using arrays or strings, we:
+                      Step 1 → Reverse the number
+                      Original: 43705
+                      Reversed: 50734
+                      Step 2 → Print digits of reversed number (again right → left)
+                      This prints:
+                      5, 0, 7, 3, 4 Exactly what we want!
+                      Dry Run Example Input: 43705
+                      Reverse process:
+                      rev = 0
+                      take 5 → rev = 5
+                      take 0 → rev = 50
+                      take 7 → rev = 507
+                      take 3 → rev = 5073
+                      take 4 → rev = 50734
+                      Now print digits of 50734:
+                      5, 0, 7, 3, 4
+                      ⭐ Final Output
+                      4, 3, 7, 0, 5
+                       */
+
+
+    // Question 14:  Write a java program to take a user input and print each digit of the number from left to right(Without using any inbuilt
+        //features) Input: N=43705;
+
+                      System.out.println("Enter a Input Number");
+                      int n13 = sc.nextInt();
+
+                      int temp = n13;
+                      int divisor = 1;
+
+                      // Step 1 Find the correct divisor (10, 100, 1000...)
+                      while (temp >= 10) {
+                          temp /= 10;
+                          divisor *= 10;
+                      }
+                      // Step 2 Print Digit from left to right
+                      while (divisor > 0) {
+                          int digit = n13 / divisor;       // extract leftmost digit
+                          System.out.println(digit);       // print digit
+                          n12  = n13 % divisor;            // remove leftmost digit
+                          divisor /= 10;                   // reduce divisor
+
+                      /*
+                      Explanation:
+                      Normally, when we extract digits using %10, we get digits from RIGHT to LEFT.
+                      Example:43705 → 5, 0, 7, 3, 4
+                      But we want:
+                      4, 3, 7, 0, 5
+                      To do this, we must solve two problems:
+                      ⭐ STEP 1: Find the Biggest Divisor (10000 for 43705) To extract the first digit, we divide like this:
+                      43705 / 10000 = 4
+                      So we must find 10000 automatically for any number.
+                      ❓ How to find the divisor?
+                      Take the original number (43705) and keep dividing by 10:
+                      43705 ÷ 10 → 4370
+                      4370 ÷ 10 → 437
+                      437 ÷ 10 → 43
+                      43 ÷ 10 → 4 Now the number becomes a single digit (4). At the same time we multiply divisor:
+                      divisor = 1
+                      divisor * 10 = 10
+                      divisor * 10 = 100
+                      divisor * 10 = 1000
+                      divisor * 10 = 10000  So now: divisor = 10000
+                      ⭐ STEP 2: Extract digits from LEFT to RIGHT Now we repeatedly divide:
+                      ✔ First digit: 43705 / 10000 = 4 Print: 4
+                      Remove first digit: 43705 % 10000 = 3705 Reduce divisor: 10000 / 10 = 1000
+                      ✔ Second digit: 3705 / 1000 = 3 Print: 3
+                      Remove first digit: 3705 % 1000 = 705 Reduce divisor: 1000 / 10 = 100
+                      ✔ Third digit: 705 / 100 = 7 Print: 7
+                      Remove first digit: 705 % 100 = 5 Reduce divisor: 100 / 10 = 10
+                      ✔ Fourth digit: 5 / 10 = 0 Print: 0
+                      Remove first digit: 5 % 10 = 5 Reduce divisor: 10 / 10 = 1
+                      ✔ Fifth digit: 5 / 1 = 5 Print: 5
+                      🔥 Final Output:4, 3, 7, 0, 5
+
+                       */
+
+    // Question 15:  Write a java program to take a user input and print the sum of each digit of the number.
+                          // Input: N=4207065;
+
+                          System.out.println("Enter a Input Number");
+                          int n14 = sc.nextInt();
+                          int sum = 0;
+
+                          while (n14 > 0) {
+
+                              int rem13 = n14 % 10; // extract last digit
+                              sum = sum + rem;      // add digit to sum
+                              n14 /= 10;            // remove last digit
+                          }
+                          System.out.println("The sum of digit is: "+ sum);
+
+
+
+                      }
+    // Question 16: Write a java program to take a user input and print the sum of each even digits of
+        // the number.Input: N=42765;
+
+                         System.out.println("Enter a number");
+                         int n15 = sc.nextInt();
+                         int sum1 = 0;
+
+                         while (n15 > 0)   {
+                             int rem15 = n15 % 10;   // extract last digit
+
+                             if (rem15 % 2 == 0) {   // check even digit
+                                 sum1 = sum1 + rem15;
+                             }
+                             n15 /= 10;
+                         }
+                         System.out.println("The sum of digit is: "+ sum1);
+
+
 
     }
 }
