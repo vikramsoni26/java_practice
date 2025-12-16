@@ -842,11 +842,59 @@ public class While_loop_03_Assignment {
                          int currBit = n28 % 2;
 
 
-                         if 
-                         n28 /= 2;
+                         if(currBit == prevBit) {
+                             isAlternating = false;
+                             break;                 // stop checking
+                         }
+                         prevBit = currBit;         // update Previous left
+                         n28 = n28/2;
                      }
-                     System.out.println(true);
+                     System.out.println(isAlternating);
                      sc10.close();
+
+    // Question 32: Number of Steps to Reduce a Number to Zero. Leet code.
+                   int n29 = 14;
+                   int count8 = 0;
+
+                  while (n29 > 0) {
+                   if (n29 % 2 == 0) {
+                   n29 = n29 / 2;   // even
+                   } else {
+                   n29 = n29 - 1;   // odd
+                   }
+                   count8++;
+                  }
+                   System.out.println("The total number of steps: "+count8);
+
+    // Question 33: Trailing Zeroes in factorial: Factorial Trailing Zeroes - LeetCod
+                    int n30 = 3;
+                    int res = 0;
+                    while (n30 > 0) {
+                        n30 /= 5;
+                        res += n30;
+                    }
+                    System.out.println("Trailling zeroes: "+res);
+
+    // Question 34: Power of Two or NOT: Leetcode.
+                    int n31 = 16;   // try different values
+                    int count10 = 0;
+                    int temp2 = n31;
+
+                    while (temp2 > 0) {
+                    int rem27 = temp2 % 2;
+                        if (rem27 == 1) {
+                            count10++;
+                            }
+                           temp2 /= 2;
+                          }
+                        if (count10 == 1) {
+                        System.out.println(n31 + " is Power of Two");
+                        } else {
+                            System.out.println(n31 + " is NOT Power of Two");
+                        }
+
+
+
 
 
 
