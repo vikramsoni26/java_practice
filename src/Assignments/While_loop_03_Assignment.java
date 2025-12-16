@@ -313,21 +313,21 @@ public class While_loop_03_Assignment {
     // Question 13: Write a java program to take a user input and print each digit of the number from left to right.
         // Input: N=43705;
                       System.out.println("Enter a number");
-                      int n12 = sc.nextInt();
+                      int n12=sc.nextInt();
 
-                      // Step 1: Reverse the number first
+        // Step 1: Reverse the number first
                       int rev = 0;
-                      int temp1 = n;
+                      int temp1 = n12;
 
                       while (temp1 > 0)  {
                           int rem1 = temp1 % 10;
-                          rev = rev * 10 + rem;
+                          rev = rev * 10 + rem1;
                           temp1 /= 10;
                       }
         // Step 2: Now print digits of reversed number (which is original left → right)
                       while (rev > 0) {
                           int rem2 = rev % 10;
-                          System.out.println(rem);
+                          System.out.println(rem2);
                           rev /= 10;
                       }
                       /*
@@ -375,7 +375,7 @@ public class While_loop_03_Assignment {
                       while (divisor > 0) {
                           int digit = n13 / divisor;       // extract leftmost digit
                           System.out.println(digit);       // print digit
-                          n12  = n13 % divisor;            // remove leftmost digit
+                          n13  = n13 % divisor;            // remove leftmost digit
                           divisor /= 10;                   // reduce divisor
 
                       /*
@@ -423,7 +423,7 @@ public class While_loop_03_Assignment {
                           while (n14 > 0) {
 
                               int rem13 = n14 % 10; // extract last digit
-                              sum = sum + rem;      // add digit to sum
+                              sum = sum + rem13;      // add digit to sum
                               n14 /= 10;            // remove last digit
                           }
                           System.out.println("The sum of digit is: "+ sum);
@@ -448,7 +448,429 @@ public class While_loop_03_Assignment {
                          }
                          System.out.println("The sum of digit is: "+ sum1);
 
+    // Question 17: Write a java program to take a user input and print the sum of each odd digit of the number.
+    // input: N=42763.
+
+                     System.out.println("Enter a number");
+                     int n16 = sc.nextInt();
+                     int sum2 = 0;
+
+                     while (n16 > 0)  {
+
+                         int rem16 = n16 % 10;   // extract last digit
+
+                         if (rem16 % 2 == 1)  {  // check odd digit
+                             sum2 = sum2 + rem16;
+                         }
+                         n16 /= 10;
+                     }
+                     System.out.println("The sum of odd digit is: "+ sum2);
+
+    // Question 18: write a java program to take a user input and print the sum of each digit of the number
+        // which are less than or equals to 5. Input n=42765;
+
+                       System.out.println("Enter a number");
+                       int n17 = sc.nextInt();
+                       int sum3 = 0;
+
+                       while (n17 > 0)  {
+
+                            int rem17 = n17 % 10;  // check last digit
+
+                            if (rem17 <=5)  {   // check rem is less than or equal to 5
+                                sum3 = sum3 + rem17;
+                            }
+                            n17 /= 10;
+                       }
+                       System.out.println("The sum of digit <= 5 is: "+ sum3);
+
+    // Question 19:  Product and Sum Difference leet code problem
+                      int n18 = 234;
+                      int sum4 = 0;
+                      int product = 1;
+
+                      while (n18 > 0)  {
+
+                          int rem18 = n18 % 10;
+                          sum4 = sum4 + rem18;
+                          product = product * rem18;
+
+                          n18 /= 10;
+                      }
+
+                      int result = product - sum4;
+
+                      System.out.println("The product and sum of digit is: "+result);
+
+    // Question 20: Add Digit: leet code problem.
+
+                     int n19 = 38;
+                     int sum5;
+
+                     while (n19 > 0)
+                     {                              // run until single digit
+                        sum5 = 0;
+
+                        while (n19>0)
+                        {
+                            int temp3 = n19%10;  // extract digit
+                            sum5+= temp3;        // add digit
+                            n19 /= 10;           // remove digit
+                        }
+                        n19 = sum5;              // assign sum back to number
+                         System.out.println("Final single digit = " + n19);
+                         sc.close();
+                     }
+
+    // Question 21: Count Digits that divides Number leet code problem
+
+                     int n20 = 121;
+                     int temp3 = n20;   // keep original number
+                     int ans = 0;
+
+                     while (temp3 > 0) {
+
+                     int digit = temp3 % 10;
+
+                     if (digit != 0 && n20 % digit == 0) {
+                     ans++;
+                     }
+
+                     temp3 /= 10;
+                     }
+
+                     System.out.println("Digits that divide the number = " + ans);
+
+    // Question 22: Write a java program to take a user input and reverse the number
+    // input : N = 3745;
+
+                     Scanner sc1 = new Scanner (System.in);
+                     System.out.println("Enter a number");
+                     int n21 = sc1.nextInt();
+
+                     int rev4 = 0;
+                     while (n21 > 0)  {
+
+                         int rem21 = n21 % 10;
+                         rev4 = 10 * rev4 + rem21;
+                         n21 /= 10;
+                     }
+                     System.out.println(rev4);
+                     sc1.close();
+
+    // Question 23 : Write a java program to take a user input and
+        //print whether the number is a palindrome number or not. Palindrome Number: if number and its reverse is same then it
+        //is called palindrome number. Input: N=34843.
+
+                     Scanner sc2 = new Scanner (System.in);
+                     System.out.println("Enter a number");
+                     int n22 = sc2.nextInt();
+                     int original3 = n22;
+                     int rev5 = 0;
+
+                     while (n22 > 0) {
+                         int rem19 = n22 % 10;        // extract last digit
+                     rev5 = rev5 * 10 + rem19;      // build reverse
+                     n22 /= 10;                 // remove last digit
+                     }
+                     if (original3 == rev5) {
+                         System.out.println("Palindrome Number");
+                     }
+                     else {
+                     System.out.println("Not a Palindrome Number");
+                     }
+
+                     sc2.close();
+
+    // Question 24: same Palindrome solve in main method.
+                     Scanner sc3 = new Scanner (System.in);
+                     // Palindrome number
+                     System.out.println("Enter a number");
+                     int n23 = sc3.nextInt();
+
+                     int original4 = n23;
+                     int rev6 = 0;
+
+                     while (n23 > 0)   {
+                         int rem23 = n23 % 10;
+                         rev6 = rev6 * 10 + rem23;
+                         n23 /= 10;
+                     }
+                     if (rev6 == original4) {
+                         System.out.println("Palindrome Number");
+                     } else {
+                         System.out.println("Not a Palindrome Number");
+                     }
+                     sc3.close();
+
+    // Question 25 : Write a java program to take a String input and check whether the given String is a palindrome
+        //String or not. Palindrome String: if String is same from both side Input: String s1=“madam”;
+
+                       Scanner sc4 = new Scanner (System.in);   // Step 1: Take input from user
+                       System.out.println("Enter a string");
+                       String s1 = sc.next();
+
+                       String original5 = s1;                   // Step 2: Store original string safely
+                       String rev7 = "";                        // Step 3: Create empty string for reverse
+
+                       int i = s1.length() - 1;                 // Step 4: Start from last character
+
+                       while (i >= 0)   {                       // Step 5: Reverse using while loop
+                           rev7 = rev7 + s1.charAt(i);
+                           i--;
+                       }
+
+                       if (original5.equals(rev7)) {           // Step 6: Compare original and reverse
+                           System.out.println("Palindrome Number");
+                       } else {
+                           System.out.println("Not a Palindrome Number");
+                       }
+                       sc4.close();
+                       /*
+                       Step 0: What does Palindrome mean?
+                       A Palindrome String is a string that looks same from left and right.
+                       madam    Forward → madam
+                       ←   →    Backward → madam
+                       ✔ Same → Palindrome
+                       Step 1: Take input from user
+                       Scanner sc = new Scanner(System.in);
+                       System.out.println("Enter a string");
+                       String s1 = sc.next();
+                       What happens?
+                       User types: madam s1 stores: "madam"
+                       📦 Memory: s1 = "madam"
+                       Step 2: Store original string safely
+                       String original = s1; Why? Because later we will change / reverse the string.
+                       We need the original value for comparison.
+                       Step 3: Create empty string for reverse
+                       String rev = ""; This will store the reversed string
+                       For "madam":
+                       Step 4: Start from last character
+                       int i = s1.length() - 1;
+                       Index	Character
+                       0	m
+                       1	a
+                       2	d
+                       3	a
+                       4	m So: s1.length() = 5 i = 5 - 1 = 4
+                       Step 5: Reverse using while loop
+                       while (i >= 0) {
+                       rev = rev + s1.charAt(i);
+                       i--;
+                       }
+                       Let’s DRY RUN this line by line 👇
+                       🔁 Iteration 1
+                       i = 4
+                       s1.charAt(4) = 'm'
+                       rev = "" + "m" → "m"
+                       i-- → 3
+                       🔁 Iteration 2
+                       i = 3
+                       s1.charAt(3) = 'a'
+                       rev = "m" + "a" → "ma"
+                       i-- → 2
+                       🔁 Iteration 3
+                       i = 2
+                       s1.charAt(2) = 'd'
+                       rev = "ma" + "d" → "mad"
+                       i-- → 1
+                       🔁 Iteration 4
+                       i = 1
+                       s1.charAt(1) = 'a'
+                       rev = "mad" + "a" → "mada"
+                       i-- → 0
+                       🔁 Iteration 5
+                       i = 0
+                       s1.charAt(0) = 'm'
+                       rev = "mada" + "m" → "madam"
+                       i-- → -1
+                       Loop stops ❌📦 Final values:
+                       original = "madam"
+                       rev      = "madam"
+                       🟢 Step 6: Compare original and reverse
+                       if (original.equals(rev)) {
+                       ystem.out.println("Palindrome String");
+                       } else {
+                       System.out.println("Not a Palindrome String");
+                       }
+                       Why .equals()?
+                       Because String comparison must be done using .equals().
+                       ✔ "madam".equals("madam") → TRUE
+                       So output:
+                       Palindrome String
+                        */
+
+    // Question 26: Write a java program to take a String input and check whether the given String is a palindrome
+        //String or not(Without reversing) Palindrome String: if String is same from both side
+        //Input: String s1=“madam”;
+
+                     Scanner sc5 = new Scanner (System.in); // take user input
+                     System.out.println("Enter a string");  // madam
+                     String s2 = sc5.next();
+
+                     int left = 0;
+                     int right = 0;
+
+                     boolean isPalindrome = true;
+
+                     while (left < right) {
+
+                         if (s2.charAt(left) != s2.charAt(right)) {
+                             isPalindrome = false;
+                             break;
+                         }
+
+                         left++;
+                         right--;
+                     }
+
+                     if (isPalindrome) {
+                         System.out.println("Palindrome Number");
+                     } else {
+                         System.out.println("Not a Palindrome Number");
+                     }
+                     sc5.close();
+                     /*
+                     // Indexes:
+                     // m a d a m
+                     //0 1 2 3 4
+                     Comparisons:
+                     s[0] == s[4]  → m == m ✔
+                     s[1] == s[3]  → a == a ✔
+                     (stop at middle)
+                     Palindrome ✔
+                     Step-by-Step Logic
+                     Take string input
+                     Set two pointers:
+                     left = 0
+                     right = length - 1
+                     Compare characters at left and right
+                     Move inward
+                     If mismatch → stop
+                     Dry Run (Very Important)
+                     Input:madam
+                     left	right	s[left]	s[right]	Match
+                     0	4	m	m	✔
+                     1	3	a	a	✔
+                     Loop ends → ✔ Palindrome
+                      */
+
+    // Question 27: WAJP to take user input and count the number of binary bits in that number when it is
+        //represented in binary form. n=20  {binary=10100}
+
+                     Scanner sc6 = new Scanner (System.in);
+                     System.out.println("Enter a number");
+                     int n24 =  sc6.nextInt();
+
+                     int count6 = 0;
+
+                     while (n24 > 0)    {
+
+                         count6++;        // count each binary digit
+                         n24 /= 2;        // divide by 2 for binary
+                     }
+                     System.out.println("Number of binary bits: "+count6);
+                     sc6.close();
+
+    // Question 28: Number of 1 Bits: Number of 1 Bits - LeetCode problem.
+                     Scanner sc7 = new Scanner (System.in);
+                     System.out.println("Enter a number");
+                     int n25 = sc7.nextInt();
+
+                     int count7 = 0;
+
+                     while (n25 > 0)     {
+                         int rem25 = n25 % 2;    // extract binary digit
+
+                         if  (rem25 == 1) {
+                             count7++;
+                         }
+                         n25 = n25/2;           // move to last binary digit
+                     }
+                     System.out.println("number of 1 bits = "+count7);
+                     sc7.close();
+
+    // question 29: WAJP to take user input and count the number of 0’s bits and 1’s bits in that number.
+
+                     Scanner sc8 = new Scanner (System.in);
+                     System.out.println("Enter a number");
+                     int n26 = sc8.nextInt();
+
+                     int ones = 0;
+                     int zeros = 0;
+
+                     while (n26 > 0)  {
+                         int rem26 = n26 % 2;   // extract last binary digit
+
+                         if (rem26 == 1) {
+                             ones++;
+                         }else {
+                             zeros++;
+                         }
+                         n26 = n26/2;  // reduce the number
+                     }
+                     System.out.println("number of 1 bits = " + ones);
+                     System.out.println("number of 0 bits = " + zeros);
+
+                     sc8.close();
+
+    // Question 30: WAJP to take user input and print its binary representation. i/p: 20
+                     Scanner sc9 = new Scanner (System.in);
+                     System.out.println("Enter a number");
+                     int n27 = sc9.nextInt();
+                     String binary = "";
+
+                     while (n27 > 0)    {
+
+                         int bit = n27 % 2;            // get last binary bit
+                         binary = bit + binary;        // add bit to LEFT side
+                         n27 /= 2;                     // reduce number
+                     }
+                     System.out.println("Binary Representation is : " + binary);
+
+    // Question 31: Alternating Bits: Binary Number with Alternating Bits - LeetCode
+                     Scanner sc10 = new Scanner (System.in);
+                     System.out.println("Enter a number");
+                     int n28 = sc10.nextInt();
+
+                     int prevBit = n28 % 2; // last bit
+                     n28 = n28/2;
+
+                     boolean isAlternating = true;
+
+                     while (n28 > 0)    {
+                         int currBit = n28 % 2;
+
+
+                         if 
+                         n28 /= 2;
+                     }
+                     System.out.println(true);
+                     sc10.close();
+
+
+
+
+
 
 
     }
+    // Question 24: Palindrome Number: leet code problem
+                  public boolean isPalindrome(int x) {
+
+                     // Negative numbers are not palindrome
+                   if (x < 0) {
+                    return false;
+                    }
+
+                   int reverse = 0;
+                   int xcopy = x;
+
+                   while (x > 0) {
+                   reverse = (reverse * 10) + (x % 10);  // add last digit
+                    x /= 10;                               // ❗ remove last digit
+                   }
+
+                   return reverse == xcopy;
+                   }
 }
