@@ -1,0 +1,21 @@
+1.What is Method Overloading?
+Developing multiple methods (not method) with the same name but different parameter
+in the same class is known as Method Overloading.
+It is an Example of compile time Polymorphism.
+Example: -
+ class Calculator{
+
+    int add(int a, int b) {
+        return a+b;
+    }
+    int add(int a, int b, int c) {
+        return a+b+c;
+    }
+    public static void main(String[] args) {
+
+        Calculator C = new Calculator();
+        System.out.println(C.add(10, 20));
+        System.out.println(C.add(10, 20, 30));
+    }
+}
+

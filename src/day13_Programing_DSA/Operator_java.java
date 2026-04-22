@@ -65,15 +65,7 @@ public class Operator_java {
                 True	False
                 false	True
          5.4 Condition Ternary operator: -
-             If operand 1 is true then operand 2 will execute else operand 3 will execute.
-
-
-
-
-
-
-
-
+             If operand 1 is true then operand 2 will execute else operand 3 will execute
       */
 
         // Example of Arithmetic operator.

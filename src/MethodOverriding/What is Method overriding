@@ -1,0 +1,4 @@
+1. What is Method overriding?
+Method overriding means defining a method in child class with same name
+and parameters as parent class but different implementation.
+It is an example of Run time polymorphism

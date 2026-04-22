@@ -1,0 +1,69 @@
+1.What is Encapsulation?
+Encapsulation is a process to restrict direct access to data and provide control acess via getter and setters. In another word it is a process of wrapping data(variable) and methods into a single unit is called class.
+Getters and setters should be public and data should be private.
+Binding data + methods in to a single unit is called encapsulation.
+Example: - you insert atm card and enter the pin to acess money but you can not directly access to bank system.
+
+2.	How to achieve Encapsulation?
+By:
+Declaring variables as private
+Providing public getter and setter methods
+What are Getter and Setter methods?
+	private variables can only be accessed within the same class (an outside class has no access to it). However, it is possible to access them if we provide public get and set methods.
+	The get method returns the variable value, and the set method sets the value.
+	Syntax for both is that they start with either get or set, followed by the name of the variable, with the first letter in upper case:
+Example: -
+class Student {
+    private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+4.	What is Data Hiding?
+	Data hiding means restricting direct access to variables to protect data.
+5.	What are advantages of Encapsulation?
+	Data security
+	 Control over data
+	 Easy maintenance
+	Flexible code
+6.	What are disadvantages of Encapsulation?
+	More boilerplate code
+	Slight complexity
+7.	What is real-time example of Encapsulation (QA)?
+	In Selenium POM, WebElements are private and accessed using public methods → this is Encapsulation.
+8.	What is POJO class?
+	POJO (Plain Old Java Object) is a simple Java class used to hold data with private variables and public getters/setters.
+Example: -
+class User {
+    private String username;
+    private String password;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+}
+
+9.	What is Java Bean class?
+	Java Bean is a special type of POJO that follows certain rules.
+	Rules of Java Bean
+	Private variables
+	 Public getters/setters
+	 Public no-argument constructor
+	 implements Serializable (optional)
+10.	 Difference between POJO and Java Bean?
+	                                POJO      vs   JAVA BEAN
+	Feature	POJO	         Java Bean
+	Rules	No strict rules	Follows rules
+	Constructor	Optional	Must have default constructor
+	Serializable	Not required	Recommended
+11.	Why POJO is used in Selenium / API Testing?
+	We use POJO classes in API testing to store request and response data.”

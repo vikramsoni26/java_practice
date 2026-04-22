@@ -1,0 +1,55 @@
+What is if?
+It is used to check a condition and when condition is true then if block will execute other wise if block will not execute.
+Syntax:
+if(condition){
+   // code
+}
+
+Example: -
+int age = 20;
+
+if(age >= 18){
+    System.out.println("Eligible to vote");
+}
+
+1.2	What is if else?
+It is used to check a condition and if block will execute when a condition will be true otherwise else will execute.
+Syntax: -
+if(condition){
+   // true block
+} else {
+   // false block
+}
+
+Example: -
+int num = 5;
+
+if(num % 2 == 0){
+    System.out.println("Even");
+} else {
+    System.out.println("Odd");
+}
+
+1.3	What is else if?
+It is used to check multiple condition and when a condition is found than there will be approate execution.
+Syntax: -
+if(condition1){
+}
+else if(condition2){
+}
+else{
+}
+
+Example: -
+
+
+2.	What is ternary operator?
+In this when option 1 is true then op2 will execute other wise option3 is execute.
+Syntax: -
+condition ? value1 : value2;
+
+Example: -
+int a = 10, b = 20;
+
+int max = (a > b) ? a : b;
+System.out.println(max);

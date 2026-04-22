@@ -1,0 +1,46 @@
+1.What is String in Java?
+String is a class in Java used to represent a sequence of characters.
+String name = "Vikram";
+
+2.Why String is immutable?
+String is immutable for security, performance, and memory optimization (String Pool).
+Once created, it cannot be changed.
+String s = "Hello";
+s.concat(" World");
+
+System.out.println(s);  // Hello (not changed)
+
+3.What is String Pool?
+String Pool is a special memory area in heap where unique string literals are stored to save memory.
+String s1 = "Java";
+String s2 = "Java";
+
+System.out.println(s1 == s2);  // true (same reference)
+
+4.Difference between == and .equals()
+== compares references, while .equals() compares actual content.
+String s1 = new String("Java");
+String s2 = new String("Java");
+
+System.out.println(s1 == s2);        // false
+System.out.println(s1.equals(s2));   // true
+
+5.Difference between String, StringBuilder, StringBuffer
+String is immutable, StringBuilder is mutable & fast (not thread-safe), StringBuffer is mutable & thread-safe (slow).
+Feature
+String	StringBuilder	StringBuffer
+Mutability	Immutable	mutable	mutable
+Thread-safe	No	No	Yes
+Performance	Slow	Fast	Slower
+
+6.How many ways to create String?
+Two ways: using String literal and using new keyword.
+String s1 = "Java";                 // literal
+String s2 = new String("Java");     // new keyword
+
+7.What is intern() method? (Optional but good)
+intern() method returns reference from String Pool if it exists, otherwise adds it to the pool.
+String s1 = new String("Java");
+String s2 = s1.intern();
+
+System.out.println(s1 == s2);  // false
