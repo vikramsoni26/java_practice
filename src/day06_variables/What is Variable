@@ -1,0 +1,58 @@
+1. What is variable?
+A variable in Java is a container used to store data values during program execution.
+int -> age = 25;
+int ->data type
+age ->variable name
+25 ->value
+2. Types of variable in java
+They are three main type of variable
+2.1 Local variable
+A variable declared inside a method or block.
+void test() {
+    int a = 10;  // local variable
+}
+Key Points
+✔ Scope → only inside method
+✔ Must be initialized before use
+✔ Stored in stack memory
+2.2 Instance variable
+A variable declared inside a class but outside any method, and belongs to object.
+class Test {
+    int a = 10;  // instance variable
+}
+Key Points
+✔ Each object has its own copy
+✔ Stored in heap memory
+✔ Access using object
+2.3 Static Variable(class variable)
+A variable declared with static keyword, shared among all objects.
+class Test {
+    static int count = 0;
+}
+Key Points
+✔ One copy for all objects
+✔ Memory efficient
+✔ Access using class name
+QUICK COMPARISON (IMPORTANT)
+Feature	      Local	         Instance	     Static
+Location	Inside method	Inside class	Inside class
+Scope	    Method only	    Object	        Class
+Memory	    Stack	        Heap	        Method area
+Access	    Direct	        Object	        Class name
+INTERVIEW TRAPS
+Where local variable stored?
+✔ Stack
+Default value of local variable?
+No default value (must initialize)
+Default value of instance/static?
+Yes (0, null, false)
+Which variable is shared?
+Static variable
+Real QA Example
+class LoginPage {
+    String username; // instance
+    static int count = 0; // static
+    void login() {
+        int attempts = 1; // local
+    }
+}

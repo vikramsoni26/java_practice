@@ -1,4 +1,4 @@
-package MethodOverriding;
+package day08_Method.MethodOverriding;
 
 public class Aniamal1Driver {
     public static void main(String[] args) {

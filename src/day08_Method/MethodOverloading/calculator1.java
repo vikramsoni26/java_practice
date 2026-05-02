@@ -1,4 +1,4 @@
-package MethodOverloading;
+package day08_Method.MethodOverloading;
 
 class calculator1 {
         int add(int a, int b){
