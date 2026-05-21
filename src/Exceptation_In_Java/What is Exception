@@ -1,0 +1,100 @@
+1.What is Exception in Java?
+An Exception is an unwanted or unexpected event that occurs during program execution and
+disrupts normal flow of the program.
+2.What is Exception Handling?
+It is a mechanism to handle runtime errors so program does not crash.
+3.Types of Exceptions
+There are two type of exception in java
+Compile time exception(Checked exception)
+Run time exception(Unchecked Exception)
+
+4.Checked vs Unchecked Exception?
+1. Checked (Compile time exception): - these exceptions are checked at compile time by the java compiler.
+Example: - 1.IO Exception.
+2.SQL Exception
+3.File not found exception
+class Test {
+        public static void main(String[] args)  throws Exception {
+                            File Reader Fr = new File Reader(“text”. “text”);
+     }
+ }
+
+2.Unchecked exception (Run time exception): - these exceptions occur during run program execution.
+Example: - 1. Null Pointer Exception.
+2.Athematic exception
+3,Array index out of exception.
+class Test {
+    public static void main(String[] args) {
+        try {
+            int a = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero");
+        }
+    }
+}
+
+5.Difference between checked and unchecked
+| Feature               | Checked           | Unchecked                   |
+| Checked at      | Compile time   | Runtime                        |
+| Handling           | Mandatory        | Optional                         |
+| Example           | IO Exception    | NullPointerException |
+6.What is try-catch block?
+1.Try block: - the try block contains code that may cause exception.
+If an exception occurs, the control immediately moves to the catch block
+2.Catch Block: - The catch block handles the exception and prevents the programme from crashing.
+try {
+    String s = null;
+    System.out.println(s.length());
+} catch (NullPointerException e) {
+    System.out.println("Null error");
+} catch (Exception e) {
+    System.out.println("General error");
+}
+
+7.What is finally block?
+The finally block always executes whether exception occurs or not.
+8.What is throw and throws?
+1.Throw: - throw used to create and thrown exception object.
+2.Throws: - throws is used to declare an exception.
+9.Difference between throw and throws?
+throw	throws
+1.Used inside the method body.	Used in method declaration
+2.Used to throw a specific exception	                Used to declare exception
+3.Throw one exception at a time	               Can declare exception multiple
+4.Used with exception object	               Use with exception class name
+
+10.What is stable element reference exception?
+Stable element reference exception occurs when the referenced web element is no longer attached to dom.
+It means selenium found the elemnt earlier but later the page is changed and that element reference become invalid.
+Where does it ouccur
+1.Page reload.
+2.Page referesh.
+3.Dom updated dynamically.
+4.After ajax call,
+•Solutions
+1.Relocate the element
+2.Use explicit wait
+3.Use try catch.
+11.What is no such element exception?
+No such element exception occurs when selenium is unable to locate an element using the given locator within specified time.
+When does it happen
+1.Wrong locator
+2.Element not presents in Dom
+3.Page not fully loaded.
+4.Frame not switched
+5.Window not switched.
+How to handle it
+1.Use Explicit wait
+2.Use find elements
+12.What is element not interactable exception?
+Element not interactable exception occurs when the element is present in Dom but not in a state that can be interacted with.
+When it happens: -
+1. Element is Hidden
+2. Element is not visible
+3. Element is disabled
+13.	What is element click interactable exception?
+Element click interactable exception occurs when another element is covering or blocking the target element when clicking
+•When it happens: -
+1.	Pop up overlay.
+2.	Loader screen.
+3.	Advertisement banner

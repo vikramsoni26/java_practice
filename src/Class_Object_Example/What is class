@@ -1,0 +1,7 @@
+1. What is class?
+A class is a blueprint or template which is used to create a object it
+does not Allocate memory in heep area until objects are created.
+2. Important point of class
+2.1 class is a user defined data type
+2.2 using one class we can create multiple objects
+

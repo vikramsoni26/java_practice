@@ -1,0 +1,33 @@
+6.What is Type Casting in Java?
+Type casting is converting one data type into another.
+7.What is Upcasting?
+Converting child object into parent reference
+class Animal {}
+class Dog extends Animal {}
+
+class Test {
+    public static void main(String[] args) {
+        Animal a = new Dog(); // Upcasting
+    }
+}
+
+
+8.What is Downcasting?
+Converting parent reference back to child type
+class Animal {}
+class Dog extends Animal {}
+
+class Test {
+public static void main(String[] args) {
+Animal a = new Dog();
+Dog d = (Dog) a; // Downcasting
+}•	}
+
+9.Difference between Upcasting and Downcasting
+10.	What is instanceof keyword?
+•	Used to check object type before casting
+•	if (a instanceof Dog) {
+•	    Dog d = (Dog) a;•	}
+
+11.	What is ClassCastException?
+ Occurs when invalid downcasting is done

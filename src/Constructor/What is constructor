@@ -1,0 +1,44 @@
+1. What is constructor?
+A constructor is a special method used to initialize object data when the object is created..
+When we create an object, the constructor is automatically call and give the value of object.
+Example: -
+class Vehicle {
+             Vehicle() {      // Vehicle constructor.
+                             System.out.println(“object created”)
+ }
+    }
+2.Types of constructors
+They are two type of constructor
+1. Default constructor.
+2. Userdefined constructor: 2.1 Non Argument constructor. 2.2 Parameterized constructor.
+1.What is default constructor?
+A constructor automatically added by the compiler when no argument is defined. If programmer not write constructor. Java create own constructor.
+Default constructor added only if there is no user-defined constructor inside java file.
+2.What is parameterized constructor?
+A constructor that accept parameters to initialize object data at creation time.
+In short form when the object is creted we pass the value and set the data.
+
+3.Constructor overloading?
+Constructor overloading is a technique in object-oriented programming (OOP) where a class has multiple constructors with different parameter lists (number or types of arguments).
+4.Difference between constructor and method
+Constructor: -
+•Name of constructor must be same as the class name.
+•Constructor will not have an return statement
+•Constructor can not be allow static, final, abstract keywords so, it can never be static, final synchronized.
+•A constructor is executed when object is created because constructor is called at time of object creation.
+•Method: -
+•A method can have any name.
+•A method will always have Return statement
+.A method can be static final, abstract or synchronized.
+.A method is executed when method is called.
+5.What is this keyword?
+The this keyword in Java refers to the current object in a method or constructor.
+The this keyword is often used to avoid confusion when class attributes have the same name as method or constructor parameters
+
+6.What is super keyword?
+In Java, the super keyword is used to refer to the parent class of a subclass.
+The most common use of the super keyword is to eliminate the confusion between superclasses and subclasses that have methods with the same name.
+It can be used in two main ways:
+To access attributes and methods from the parent class
+To call the parent class constructor
+

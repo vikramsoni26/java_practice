@@ -1,0 +1,51 @@
+1. What are wrapper classes in java?
+Wrapper classes are used to covert primitive data type into objects
+java has primtive data types like int, char, double
+but collections work only objects
+so java provide wrapper classes to wrap primtive into objects.
+int -> integer
+float-> float etc.
+int a = 10;
+        // converting primitive to object
+        Integer obj = Integer.valueOf(a);
+        System.out.println(obj);
+
+        // converting object to primitive
+        int b = obj.intValue();
+        System.out.println(b);
+
+2.Why do we need Wrapper Classes?
+Required in Collections (Collections store objects only)
+Used in APIs and frameworks
+Provide utility methods
+List all Wrapper Classes
+| Primitive | Wrapper   |
+| ---------     | --------- |
+| int              | Integer   |
+| char          | Character |
+| double     | Double    |
+| float          | Float     |
+| boolean   | Boolean   |
+| long           | Long      |
+| short          | Short     |
+| byte      | Byte      |
+4.What is Boxing and Unboxing?
+Boxing → primitive → object
+Unboxing → object → primitive
+Example Autoboxing
+int a = 10;
+Integer obj = a;  // automatic conversion
+
+Example unboxing
+Integer obj = 20;
+int a = obj;  // automatic conversion
+
+5.What is Auto-boxing and Auto-unboxing?
+Autoboxing is automatic conversion of primitive to wrapper object, and unboxing is conversion of wrapper object to primitive.
+Example
+int a = 10;
+Integer obj = a;  // autoboxing
+
+Example
+Integer obj = Integer.valueOf(a);
+
